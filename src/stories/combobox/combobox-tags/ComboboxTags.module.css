@@ -1,0 +1,65 @@
+.ComboboxTags {
+  cursor: text;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 4px 12px; /* 4px margin of tags will add to this */
+  font-family: var(--font-basic);
+  font-weight: var(--font-weight-basic-semibold);
+  font-size: var(--font-size-m);
+  width: 100%;
+
+  &:not(:focus-within) {
+    box-shadow: inset 0 0 0 1px var(--color-border);
+  }
+
+  &:disabled {
+    background-color: var(--color-input-disabled);
+    color: var(--color-text-disabled);
+
+    &::placeholder {
+      color: var(--color-text-disabled);
+    }
+  }
+}
+
+/* Do not show error border if focus-visible */
+.ComboboxTags:global(.has-error):not(:focus-within) {
+  box-shadow: inset 0 0 0 1px var(--color-border-error);
+}
+
+.ComboboxTags_tagList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ComboboxTags_tagPill,
+.ComboboxTags_input {
+  margin: 4px;
+}
+
+.ComboboxTags_input {
+  flex-grow: 1;
+  min-width: 200px;
+  height: 20px;
+  padding: 6px 2px;
+  background-color: transparent;
+  border: none;
+  font-family: var(--font-basic);
+  font-weight: var(--font-weight-basic-semibold);
+  font-size: var(--font-size-m);
+  color: var(--color-input-text);
+
+  &::placeholder {
+    color: var(--color-text-disabled);
+    font-weight: var(--font-weight-basic-medium);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.ComboboxTags_menu {
+  cursor: default;
+}

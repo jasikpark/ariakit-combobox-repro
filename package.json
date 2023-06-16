@@ -12,8 +12,12 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@ariakit/react": "^0.2.9",
+    "@tanstack/react-query": "^4.29.14",
+    "classnames": "^2.3.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.44.3"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.1.0-alpha.36",

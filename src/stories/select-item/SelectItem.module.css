@@ -1,0 +1,34 @@
+.SelectItem {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding-left: 24px;
+  padding-right: 8px;
+  font-size: var(--font-size-s);
+}
+
+.SelectItem:not(.SelectItem___isSelected, .SelectItem___isMessage) {
+  color: var(--color-text-lowlight);
+}
+
+.SelectItem___isSelected::before {
+  content: '';
+  background-image: url('@assets/check-heavy-accent.svg');
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 16px;
+}
+
+.SelectItem[data-active-item] {
+  background-color: var(--color-background-hover);
+}
+
+.SelectItem___isMessage {
+  color: var(--color-text-lowerlight);
+  justify-content: center;
+}

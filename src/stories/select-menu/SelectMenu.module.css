@@ -1,0 +1,31 @@
+.SelectMenu {
+  position: absolute;
+  margin: 8px 0 0;
+  padding: 8px;
+  list-style-type: none;
+  background-color: var(--color-background);
+  box-shadow: var(--popover-box-shadow);
+  border-radius: 4px;
+  border: 1px var(--color-border) solid;
+  box-sizing: border-box;
+  max-height: 230px;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.SelectMenu___isOpen:focus {
+  /* Visible in Windows high-contrast themes */
+  outline: 2px transparent dotted;
+
+  /* Set border style for browsers that do not support :focus-visible (safari) */
+  border: 2px var(--color-border-accent) solid;
+}
+
+.SelectMenu___isOpen:focus-visible {
+  border: 2px var(--color-border-accent) solid;
+}
+
+.SelectMenu___isOpen:focus:not(:focus-visible) {
+  /* If the browser supports :focus-visible, use normal border when focused from mouse click */
+  border: 1px var(--color-border) solid;
+}

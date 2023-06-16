@@ -1,0 +1,24 @@
+.ComboboxItem {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: 4px;
+  padding-left: 12px;
+  padding-right: 8px;
+  font-size: var(--font-size-s);
+}
+
+.ComboboxItem:not(.ComboboxItem___isMessage) {
+  cursor: pointer;
+  color: var(--color-text-lowlight);
+}
+
+.ComboboxItem[data-active-item] {
+  background-color: var(--color-background-hover);
+}
+
+.ComboboxItem___isMessage {
+  color: var(--color-text-lowerlight);
+  justify-content: center;
+}
